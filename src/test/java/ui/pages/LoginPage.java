@@ -8,7 +8,7 @@ public class LoginPage {
 
     //selectors
 
-    SelenideElement emailInput = $("[type=email]");
+    SelenideElement emailInput = $("#email");
     SelenideElement passwordInput = $("#password");
     SelenideElement logInButton = $("[data-ui-name=Box]");
 
