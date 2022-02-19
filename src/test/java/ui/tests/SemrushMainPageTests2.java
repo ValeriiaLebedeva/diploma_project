@@ -15,6 +15,7 @@ public class SemrushMainPageTests2 extends TestBase {
     @Test
     void loginTest() {
         open(semrushConfig.webUrl());
+        semrushMainPage.clickOnTheLoginButton();
         loginPage.setEmailInput(semrushConfig.login());
         loginPage.setPasswordInput(semrushConfig.password());
         loginPage.clickOnTheLoginButton();

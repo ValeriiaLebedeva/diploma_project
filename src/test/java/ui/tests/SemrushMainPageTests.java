@@ -23,7 +23,8 @@ public class SemrushMainPageTests extends TestBase {
     @Test
     public void loginTest() {
         open("https://www.semrush.com/");
-        $("[type=email]").setValue("valeria+1@segterra.com");
+        $("[data-ga-label=login]").click();
+        $("#email").setValue("valeria+1@segterra.com");
         $("#password").setValue("Azsxdcfvgb12345!");
         $("[data-ui-name=Box]").click();
 

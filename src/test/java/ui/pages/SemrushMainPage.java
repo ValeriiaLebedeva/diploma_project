@@ -18,6 +18,7 @@ public class SemrushMainPage {
     SelenideElement headerFeatures1= $("[data-test=header_features]");
     SelenideElement startNowButton = $("[data-test=main-cta__btn]");
     SelenideElement learnMoreButton = $("[data-ga-label=stats]");
+    SelenideElement loginButton = $("[data-ga-label=login]");
 
 
 
@@ -49,5 +50,9 @@ public class SemrushMainPage {
 
     public void clickOnTheLearnMoreButton(){
         learnMoreButton.click();
+    }
+
+    public void clickOnTheLoginButton(){
+        loginButton.click();
     }
 }
