@@ -16,11 +16,11 @@ public class SemrushTests extends TestBase {
     @Test
     void loginTest() {
         step("Open main page", () -> {
-                    open(semrushConfig.webUrl());
+            open(semrushConfig.webUrl());
         });
 
         step("Click on the login button (main page)", () -> {
-        semrushMainPage.clickOnTheLoginButton();
+            semrushMainPage.clickOnTheLoginButton();
         });
 
         step("Type email into email input field", () -> {
@@ -28,14 +28,17 @@ public class SemrushTests extends TestBase {
         });
 
         step("Type password into password input field", () -> {
-        loginPage.setPasswordInput(semrushConfig.password());
+            loginPage.setPasswordInput(semrushConfig.password());
         });
 
         step("Click on the login button (Login page)", () -> {
             loginPage.clickOnTheLoginButton();
         });
 
-        //add test with checking profile page
+        step("Check profile button is visible on profile page", () -> {
+            profilePage.profileButtonIsVisible();
+        });
+
     }
 
 

@@ -24,6 +24,7 @@ public class TestBase {
     CreateAccountPage createAccountPage = new CreateAccountPage();
     FeaturesPage featuresPage = new FeaturesPage();
     StatsAndFactsPage statsAndFactsPage = new StatsAndFactsPage();
+    ProfilePage profilePage = new ProfilePage();
 
 
     @BeforeAll
