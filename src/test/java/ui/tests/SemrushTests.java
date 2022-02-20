@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
-public class SemrushMainPageTests extends TestBase {
+public class SemrushTests extends TestBase {
 
     public static SemrushConfig semrushConfig = ConfigFactory.create(SemrushConfig.class, System.getProperties());
 
