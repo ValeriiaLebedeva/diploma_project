@@ -2,9 +2,9 @@ package ui.tests;
 
 import config.SemrushConfig;
 import org.aeonbits.owner.ConfigFactory;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
 public class SemrushMainPageTests extends TestBase {
@@ -13,27 +13,17 @@ public class SemrushMainPageTests extends TestBase {
 
 
     @Test
-    void login2() {
+    void loginTest() {
         open(semrushConfig.webUrl());
+        semrushMainPage.clickOnTheLoginButton();
         loginPage.setEmailInput(semrushConfig.login());
         loginPage.setPasswordInput(semrushConfig.password());
         loginPage.clickOnTheLoginButton();
     }
 
-    @Test
-    public void loginTest() {
-        open("https://www.semrush.com/");
-        $("[data-ga-label=login]").click();
-        $("#email").setValue("valeria+1@segterra.com");
-        $("#password").setValue("Azsxdcfvgb12345!");
-        $("[data-ui-name=Box]").click();
-
-    }
-
-
 
     @Test
-    public void changeLocaleTest2() {
+    public void changeLocaleTest() {
         open(semrushConfig.webUrl());
         semrushMainPage.clickOnTheSwitchLocaleButton();
         semrushMainPage.selectRuLocale();
@@ -43,24 +33,7 @@ public class SemrushMainPageTests extends TestBase {
 
 
     @Test
-    public void changeLocaleTest() {
-        open("https://www.semrush.com/");
-        $("[data-test=header_lang_switcher_button]").click();
-        $("[value=ru]").click();
-        $$(".index-title").get(0).shouldHave(text("Получайте измеримые результаты от интернет-маркетинга"));
-        $("#srf-header div div nav a:nth-child(1)").shouldHave(text("Возможности"));
-
-    }
-
-    @Test
-    public void tabAllisVisibleAtFeaturesPage () {
-        open("https://www.semrush.com/");
-        $("[data-test=header_features]").click();
-        $(".semrush-features__choose-tabs label").shouldHave(text("All"));
-    }
-
-    @Test
-    public void tabAllisVisibleAtFeaturesPage2 () {
+    public void tabAllisVisibleAtFeaturesPageTest () {
         open(semrushConfig.webUrl());
         semrushMainPage.clickOnTheFeaturesInHeader();
         featuresPage.CheckAllTabHasTextAll();
@@ -68,29 +41,16 @@ public class SemrushMainPageTests extends TestBase {
 
 
     @Test
-    public void startButtonTakesUserToCreateAccountPage () {
-        open("https://www.semrush.com/");
-        $("[data-test=main-cta__btn]").click();
-        $("[data-ui-name=Text]").shouldHave(text("Create your account"));
-    }
-
-
-    @Test
-    public void startButtonTakesUserToCreateAccountPage2 () {
+    public void startButtonTakesUserToCreateAccountPageTest () {
         open(semrushConfig.webUrl());
         semrushMainPage.clickOnTheStartNowButton();
         createAccountPage.checkCreateAccountPageText();
     }
 
-    @Test
-    public void statsAndFactsPageOpensClickingOnTheLearnMoreButton () {
-        open("https://www.semrush.com/");
-        $("[data-ga-label=stats]").click();
-        $(".MainSection__title--2m8RC").shouldHave(text("Stats and Facts"));
-    }
 
     @Test
-    public void statsAndFactsPageOpensClickingOnTheLearnMoreButton2 () {
+    @Disabled
+    public void statsAndFactsPageOpensClickingOnTheLearnMoreButtonTest () {
         open(semrushConfig.webUrl());
         semrushMainPage.clickOnTheLearnMoreButton();
         statsAndFactsPage.checkStatsAndFactsText();
