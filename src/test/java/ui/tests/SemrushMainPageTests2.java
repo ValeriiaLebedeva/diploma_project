@@ -4,7 +4,6 @@ import config.SemrushConfig;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
 public class SemrushMainPageTests2 extends TestBase {

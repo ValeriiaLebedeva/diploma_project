@@ -36,7 +36,7 @@ public class TestBase {
         String password = credentials.password();
         String urlRemote = format("https://%s:%s@%s", login, password, value);
         Configuration.remote = urlRemote;
-        //     System.out.println(urlRemote);
+             System.out.println(urlRemote);
 
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
