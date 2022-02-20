@@ -13,7 +13,7 @@ public class CreateAccountPage {
     //actions
 
     public void checkCreateAccountPageText(){
-        createAccountPageText.shouldHave(text("Create your account"));
+        createAccountPageText.shouldHave(text("Создать учетную запись"));
 
     }
 
