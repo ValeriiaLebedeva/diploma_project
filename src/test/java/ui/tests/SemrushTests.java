@@ -13,6 +13,17 @@ public class SemrushTests extends TestBase {
     public static SemrushConfig semrushConfig = ConfigFactory.create(SemrushConfig.class, System.getProperties());
 
 
+
+    @Test
+
+    void llflfl(){
+        open(semrushConfig.webUrl());
+        semrushMainPage.clickOnTheLoginButton();
+        loginPage.clickOnTheLoginButton();
+
+
+    }
+
     @Test
     void loginTest() {
         step("Open main page", () -> {
