@@ -32,8 +32,8 @@ public class TestBase {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         Configuration.startMaximized = true;
         String value = System.getProperty("url", "selenoid.autotests.cloud/wd/hub/");
-        String login = credentials.login();
-        String password = credentials.password();
+        String login = credentials.login1();
+        String password = credentials.password1();
         String urlRemote = format("https://%s:%s@%s", login, password, value);
         Configuration.remote = urlRemote;
              System.out.println(urlRemote);
