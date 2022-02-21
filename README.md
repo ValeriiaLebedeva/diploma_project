@@ -1,5 +1,5 @@
 # Semrush UI autotests 
-https://www.semrush.com/
+### https://www.semrush.com/
 
 # Test-cases
 1. Successful log in test
@@ -35,7 +35,7 @@ allure serve build/allure-results
 ```
 
 # Jenkins job
-https://jenkins.autotests.cloud/job/ValeriiaLebedeva_diploma_uiTests/
+### https://jenkins.autotests.cloud/job/ValeriiaLebedeva_diploma_uiTests/
 
 How to build project: 
 1. Click on the 'Build with parameters'
