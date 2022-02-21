@@ -28,18 +28,6 @@ gradle clean test -Durl=selenoid.autotests.cloud/wd/hub/
 ```
 
 
-### Post build task for sending telegram notifications:
-
-```bash
-java  \
-"-DprojectName=${PROJECT_NAME}" \
-"-Denv=prod" \
-"-DreportLink=${BUILD_URL}" \
-"-Dcomm=Semrush autotest result" \
-"-Dconfig.file=notifications/telegram.json" \
--jar allure-notifications-3.1.2.jar
-```
-
 ### Serve report:
 
 ```bash
