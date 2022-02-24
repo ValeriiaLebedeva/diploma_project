@@ -1,4 +1,4 @@
-package ui.pages;
+package pages;
 
 import com.codeborne.selenide.SelenideElement;
 
@@ -11,11 +11,7 @@ public class CreateAccountPage {
     SelenideElement createAccountPageText = $("[data-ui-name=Text]");
 
     //actions
-
     public void checkCreateAccountPageText(){
         createAccountPageText.shouldHave(text("Создать учетную запись"));
-
     }
-
-
 }

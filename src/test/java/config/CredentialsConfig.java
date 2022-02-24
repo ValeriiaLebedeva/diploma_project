@@ -1,6 +1,5 @@
 package config;
 
-
 import org.aeonbits.owner.Config;
 
 @Config.LoadPolicy(Config.LoadType.MERGE)
@@ -8,6 +7,6 @@ import org.aeonbits.owner.Config;
         "classpath:config/credentials.properties"})
 
 public interface CredentialsConfig extends Config {
-    String login1();
-    String password1();
+    String login();
+    String password();
 }

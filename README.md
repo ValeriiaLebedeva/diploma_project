@@ -73,7 +73,6 @@ https://jenkins.autotests.cloud/job/ValeriiaLebedeva_diploma_uiTests/35/allure/
 </p>
 
 # Jira integration
-
 <p align="center">
   <img src="images/jiraintegration.png">
 </p>

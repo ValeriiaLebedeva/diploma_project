@@ -1,16 +1,14 @@
-package ui.pages;
+package pages;
 
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.byClassName;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
 public class SemrushMainPage {
 
     //selectors
-
     SelenideElement switchLocaleButton = $("[data-test=header_lang_switcher_button]");
     SelenideElement ruLocaleInDropdownList = $("[value=ru]");
     SelenideElement mainText = $$(".index-title").get(0);
@@ -20,10 +18,7 @@ public class SemrushMainPage {
     SelenideElement learnMoreButton = $("[data-ga-label=stats]");
     SelenideElement loginButton = $("[data-ga-label=login]");
 
-
-
     // actions
-
     public void clickOnTheSwitchLocaleButton(){
         switchLocaleButton.click();
     }
